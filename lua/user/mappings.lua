@@ -32,20 +32,15 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    
     -- resize
     ["<A-n>"] = { ":vertical resize +2<CR>" },
     ["<A-m>"] = { ":vertical resize -2<CR>" },
     ["<A-,>"] = { ":resize -2<CR>" },
     ["<A-.>"] = { ":resize +2<CR>" },
     ["<A-=>"] = { "<C-w>=", desc = "Resize equal" },
-    
     -- split
     ["<A-v>"] = { "<C-w>v", desc = "Split window vertically" },
     ["<A-s>"] = { "<C-w>s", desc = "Split window horizontally" },
-    
-
-
   },
   t = {
     -- setting a mapping to false will disable it
