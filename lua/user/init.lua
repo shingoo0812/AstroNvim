@@ -17,9 +17,8 @@ return {
     },
   },
 
-
   -- Set colorscheme to use
---  colorscheme = "rose-pine-moon",
+  --  colorscheme = "rose-pine-moon",
   -- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
   colorscheme = "catppuccin-mocha",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -44,6 +43,7 @@ return {
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
+        -- "missing-fields"
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -53,6 +53,15 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      -- lua_ls = {
+      --   Lua = {
+      --     workspace = { checkThirdParty = false },
+      --     telemetry = { enable = false },
+      --     diagnostics = {
+      --       disable = { "missing-fields" },
+      --     },
+      --   },
+      -- },
     },
   },
 
@@ -82,6 +91,8 @@ return {
     --     "~/%.config/foo/.*" = "fooscript",
     --   },
     -- }
+    require("notify").setup {
+      background_colour = "#000000",
+    }
   end,
-
 }
